@@ -1,0 +1,1035 @@
+[
+  {
+    "id": 1,
+    "name": "Smartwatch",
+    "description": "Smartwatch - high quality and reliable.",
+    "price": 3999,
+    "category": "Electronics",
+    "image": "https://imagescdn.thecollective.in/img/app/product/6/664543-6893471.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Sofa Set",
+    "description": "Sofa Set - high quality and reliable.",
+    "price": 35000,
+    "category": "Home",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUc72suvEBMAQDz0almeX0by_Pu3euNBdUDw&s"
+  },
+  {
+    "id": 3,
+    "name": "Camera",
+    "description": "Camera - high quality and reliable.",
+    "price": 35567,
+    "category": "Electronics",
+    "image": "https://m.media-amazon.com/images/I/317PCBjm1iL._SR290,290_.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Jeans",
+    "description": "Jeans - high quality and reliable.",
+    "price": 699,
+    "category": "Clothes",
+    "image": "https://www.urbanofashion.com/cdn/shop/files/jeanloose-lblue-3.jpg?v=1708169302"
+  },
+  {
+    "id": 5,
+    "name": "Summer Dress",
+    "description": "Summer Dress - high quality and reliable.",
+    "price": 867,
+    "category": "Clothes",
+    "image": "https://m.media-amazon.com/images/I/716A20Ns+aL._AC_UY1100_.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Smartwatch",
+    "description": "Smartwatch - high quality and reliable.",
+    "price": 2699,
+    "category": "Electronics",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCzmdrmt0iVCDWlYsJbtDmwPRWb5LkX7RqFg&s"
+  },
+  {
+    "id": 7,
+    "name": "Sofa Set",
+    "description": "Sofa Set - high quality and reliable.",
+    "price": 39999,
+    "category": "Home",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThOiebPslZsdiheyLrsxpQYU8TtKaclQpmbg&s"
+  },
+  {
+    "id": 8,
+    "name": "Sofa Set",
+    "description": "Sofa Set - high quality and reliable.",
+    "price": 19590,
+    "category": "Home",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdnb39Wv8Io78__b-KqmejJv9ABBTeXost-g&s"
+  },
+  {
+    "id": 9,
+    "name": "Summer Dress",
+    "description": "Summer Dress - high quality and reliable.",
+    "price": 786,
+    "category": "Clothes",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxb80QCSK3iJlMu4qU8pqALrPooGT3Vmgirg&s"
+  },
+  {
+    "id": 10,
+    "name": "Summer Dress",
+    "description": "Summer Dress - high quality and reliable.",
+    "price": 630,
+    "category": "Clothes",
+    "image": "https://images.meesho.com/images/products/370542654/rax41_512.webp"
+  },
+  {
+    "id": 11,
+    "name": "Formal Shirt",
+    "description": "Formal Shirt - high quality and reliable.",
+    "price": 599,
+    "category": "Clothes",
+    "image": "https://img.tatacliq.com/images/i22//437Wx649H/MP000000025039333_437Wx649H_202501141937051.jpeg"
+  },
+  {
+    "id": 12,
+    "name": "Bluetooth Headphones",
+    "description": "Bluetooth Headphones - high quality and reliable.",
+    "price": 1880,
+    "category": "Electronics",
+    "image": "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/29856318/2025/1/8/79a9f99b-915e-4187-b16a-370d4c8f79491736328891444-Sony-Unisex-Headphones-2641736328890534-1.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Summer Dress",
+    "description": "Summer Dress - high quality and reliable.",
+    "price": 550,
+    "category": "Clothes",
+    "image": "https://img2.ogaanindia.com/pub/media/catalog/product/cache/3f6619daccdb194398d06464ab49fa6e/l/d/ldrvch01n32858758-yellow1.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Smartphone",
+    "description": "Smartphone - high quality and reliable.",
+    "price": 16797,
+    "category": "Electronics",
+    "image": "https://thegreytechnologies.in/cdn/shop/products/mini-smartphone-android-6.jpg?v=1701107217&width=1445"
+  },
+  {
+    "id": 15,
+    "name": "Coffee Table",
+    "description": "Coffee Table - high quality and reliable.",
+    "price": 3357,
+    "category": "Home",
+    "image": "https://mysleepyhead.com/media/catalog/product/s/l/sleepyhead_product_ls_309_new.jpg?auto=webp&format=pjpg&fit=cover"
+  },
+  {
+    "id": 16,
+    "name": "Formal Shirt",
+    "description": "Formal Shirt - high quality and reliable.",
+    "price": 496,
+    "category": "Clothes",
+    "image": "https://saadaa.in/cdn/shop/files/134.jpg?v=1729922912"
+  },
+  {
+    "id": 17,
+    "name": "Laptop",
+    "description": "Laptop - high quality and reliable.",
+    "price": 35498,
+    "category": "Electronics",
+    "image": "https://m.media-amazon.com/images/I/510uTHyDqGL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Summer Dress",
+    "description": "Summer Dress - high quality and reliable.",
+    "price": 617,
+    "category": "Clothes",
+    "image": "https://d3v4qpjzw4kz8j.cloudfront.net/optimise/29-02-2024_at_19.36.182024_02_29_Danna_6.jpeg?height=440&quality=80&signature=f2fd9c28a137c0d61369f5b4d0587e937328b8f78d7918265c12640833b453df&src0=uploads%2Fproduct_image%2Fphoto%2F65e21c25af7e4f3a7ba7e0e3%2F29-02-2024_at_19.36.182024_02_29_Danna_6.jpg&version=20221026&watermark=false&width=275"
+  },
+  {
+    "id": 19,
+    "name": "Camera",
+    "description": "Camera - high quality and reliable.",
+    "price": 27527,
+    "category": "Electronics",
+    "image": "https://poojaelectronics.in/storage/2023/08/Nikon-D7500-DSLR-Camera-with-18-140mm-Lens-Online-Buy-India_01.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Formal Shirt",
+    "description": "Formal Shirt - high quality and reliable.",
+    "price": 447,
+    "category": "Clothes",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20231012/cJFi/6528297eddf779151938200b/-473Wx593H-469514981-darkblue-MODEL.jpg"
+  },
+  {
+    "id": 21,
+    "name": "LED Lamp",
+    "description": "LED Lamp - high quality and reliable.",
+    "price": 454,
+    "category": "Home",
+    "image": "https://shop.bajajelectricals.com/cdn/shop/files/830553_P_default.jpg?v=1723205867"
+  },
+  {
+    "id": 22,
+    "name": "Bookshelf",
+    "description": "Bookshelf - high quality and reliable.",
+    "price": 3277,
+    "category": "Home",
+    "image": "https://m.media-amazon.com/images/I/61ewEvPy2wL._AC_UF894,1000_QL80_.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Denim Jacket",
+    "description": "Denim Jacket - high quality and reliable.",
+    "price": 488,
+    "category": "Clothes",
+    "image": "https://www.urbanofashion.com/cdn/shop/files/jakt-denim-mblue.jpg?v=1732203384"
+  },
+  {
+    "id": 24,
+    "name": "Denim Jacket",
+    "description": "Denim Jacket - high quality and reliable.",
+    "price": 378,
+    "category": "Clothes",
+    "image": "https://m.media-amazon.com/images/I/81HRDsfEKUL._AC_UY1100_.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Sofa Set",
+    "description": "Sofa Set - high quality and reliable.",
+    "price": 13658,
+    "category": "Home",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaOh3rLhUT0Q6rrCtcHfGhOF8whhJITTrtfQ&s"
+  },
+  {
+    "id": 26,
+    "name": "Denim Jacket",
+    "description": "Denim Jacket - high quality and reliable.",
+    "price": 674,
+    "category": "Clothes",
+    "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/jacket/x/h/p/xl-nmnt-7004-montrez-original-imag5t3nfpbqhgrx-bb.jpeg?q=20&crop=false"
+  },
+  {
+    "id": 27,
+    "name": "Denim Jacket",
+    "description": "Denim Jacket - high quality and reliable.",
+    "price": 449,
+    "category": "Clothes",
+    "image": "https://levi.in/cdn/shop/files/248690138_02_Front.jpg?v=1733253170&width=1445"
+  },
+  {
+    "id": 28,
+    "name": "LED Lamp",
+    "description": "LED Lamp - high quality and reliable.",
+    "price": 232,
+    "category": "Home",
+    "image": "https://m.media-amazon.com/images/I/71q6ebbVnbL._AC_UF1000,1000_QL80_DpWeblab_.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Laptop",
+    "description": "Laptop - high quality and reliable.",
+    "price": 40847,
+    "category": "Electronics",
+    "image": "https://in-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/c/0/c08192495_3_1_1.png"
+  },
+  {
+    "id": 30,
+    "name": "Camera",
+    "description": "Camera - high quality and reliable.",
+    "price": 30225,
+    "category": "Electronics",
+    "image": "https://images-cdn.ubuy.co.in/66ec14a372437f6c6c144eee-canon-eos-4000d-dslr-camera-ef-s-18-55.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Formal Shirt",
+    "description": "Formal Shirt - high quality and reliable.",
+    "price": 956,
+    "category": "Clothes",
+    "image": "https://foreverformals.in/cdn/shop/products/SS23SQARTHASAT_WIN_1.jpg?v=1681381948"
+  },
+  {
+    "id": 32,
+    "name": "Camera",
+    "description": "Camera - high quality and reliable.",
+    "price": 39637,
+    "category": "Electronics",
+    "image": "https://storeassets.im-cdn.com/temp/bulk_operations/jjmehta/1708737375/canon_r8_2450_1.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Coffee Table",
+    "description": "Coffee Table - high quality and reliable.",
+    "price": 5280,
+    "category": "Home",
+    "image": "https://cdn.decornation.in/wp-content/uploads/2020/02/wooden-coffee-table-4-stool.png"
+  },
+  {
+    "id": 34,
+    "name": "Coffee Table",
+    "description": "Coffee Table - high quality and reliable.",
+    "price": 4543,
+    "category": "Home",
+    "image": "https://www.godrejinterio.com/imagestore/B2C/56121403SD00319/56121403SD00319_A2_500x500.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Bookshelf",
+    "description": "Bookshelf - high quality and reliable.",
+    "price": 4194,
+    "category": "Home",
+    "image": "https://wallmantra.com/wp-content/uploads/1_05a59443-8634-46cb-b32b-bfbe73336810.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Bluetooth Headphones",
+    "description": "Bluetooth Headphones - high quality and reliable.",
+    "price": 2324,
+    "category": "Electronics",
+    "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1721992677/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/308673_jxaozj.png"
+  },
+  {
+    "id": 37,
+    "name": "Jeans",
+    "description": "Jeans - high quality and reliable.",
+    "price": 817,
+    "category": "Clothes",
+    "image": "https://vader-prod.s3.amazonaws.com/1737112779-1730215419-best-jeans-women-6720fde100387.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Sofa Set",
+    "description": "Sofa Set - high quality and reliable.",
+    "price": 27575,
+    "category": "Home",
+    "image": "https://indiannest.in/cdn/shop/files/H598fb849e1e543528cc6e61987f27a47u.jpg?v=1684257622"
+  },
+  {
+    "id": 39,
+    "name": "Camera",
+    "description": "Camera - high quality and reliable.",
+    "price": 44508,
+    "category": "Electronics",
+    "image": "https://m.media-amazon.com/images/I/71bEYFvV5lL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 40,
+    "name": "LED Lamp",
+    "description": "LED Lamp - high quality and reliable.",
+    "price": 1532,
+    "category": "Home",
+    "image": "https://images-cdn.ubuy.co.in/6343196eee72ab337e42a4b6-led-wood-table-lamp-3-color-temperature.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Denim Jacket",
+    "description": "Denim Jacket - high quality and reliable.",
+    "price": 472,
+    "category": "Clothes",
+    "image": "https://carolina.net.au/cdn/shop/files/50_1.jpg?v=1690770279&width=1000"
+  },
+  {
+    "id": 42,
+    "name": "Smartphone",
+    "description": "Smartphone - high quality and reliable.",
+    "price": 25898,
+    "category": "Electronics",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/in/2501/gallery/in-galaxy-s25-s931-sm-s931blbqins-thumb-544656234?$264_264_PNG$"
+  },
+  {
+    "id": 43,
+    "name": "Jeans",
+    "description": "Jeans - high quality and reliable.",
+    "price": 873,
+    "category": "Clothes",
+    "image": "https://gfx3.varlesca.pl/media/res/products/425/36425/1015x1350/spodnie-stilo-jeans-niebieskie_2.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Bookshelf",
+    "description": "Bookshelf - high quality and reliable.",
+    "price": 4906,
+    "category": "Home",
+    "image": "https://ganpatiarts.com/cdn/shop/products/BOOK-SHELF-8.jpg?v=1710313360&width=1214"
+  },
+  {
+    "id": 45,
+    "name": "Bookshelf",
+    "description": "Bookshelf - high quality and reliable.",
+    "price": 4996,
+    "category": "Home",
+    "image": "https://ii1.pepperfry.com/media/catalog/product/k/o/494x544/kosmo-william-bookshelf-in-fumed-oak-by-spacewood-kosmo-william-bookshelf-in-fumed-oak-by-spacewood-1yxath.jpg"
+  },
+  {
+    "id": 46,
+    "name": "Formal Shirt",
+    "description": "Formal Shirt - high quality and reliable.",
+    "price": 270.43,
+    "category": "Clothes",
+    "image": "https://m.media-amazon.com/images/I/51NcJWAmojL._AC_UY1100_.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Laptop",
+    "description": "Laptop - high quality and reliable.",
+    "price": 61896,
+    "category": "Electronics",
+    "image": "https://4.imimg.com/data4/SJ/BA/MY-3018414/apple-laptop-500x500.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Bookshelf",
+    "description": "Bookshelf - high quality and reliable.",
+    "price": 4108,
+    "category": "Home",
+    "image": "https://m.media-amazon.com/images/I/61AAeUs2MKL.jpg"
+  },
+  {
+    "id": 49,
+    "name": "Denim Jacket",
+    "description": "Denim Jacket - high quality and reliable.",
+    "price": 653,
+    "category": "Clothes",
+    "image": "https://campussutra.com/cdn/shop/products/CSMAWJKD9047SBU_1.webp?v=1707398550"
+  },
+  {
+    "id": 50,
+    "name": "Coffee Table",
+    "description": "Coffee Table - high quality and reliable.",
+    "price": 3663,
+    "category": "Home",
+    "image": "https://fleck.co.in/cdn/shop/products/Skog_Solid_wood_coffee_table_by_Fleck.jpg?v=1714395873"
+  },
+
+  
+    {
+      "id": 51,
+      "name": "Floral Print Top",
+      "price": 599,
+      "category": "women",
+      "subcategory": "tops",
+      "image": "top1.jpg",
+      "description": "Floral print short sleeve cotton top."
+    },
+    {
+      "id": 52,
+      "name": "Striped V-Neck Top",
+      "price": 649,
+      "category": "women",
+      "subcategory": "tops",
+      "image": "top2.jpg",
+      "description": "Soft striped V-neck top with roll-up sleeves."
+    },
+    {
+      "id": 53,
+      "name": "Tie-Dye Cropped Top",
+      "price": 549,
+      "category": "women",
+      "subcategory": "tops",
+      "image": "top3.jpg",
+      "description": "Trendy tie-dye cropped top for casual outings."
+    },
+    {
+      "id": 54,
+      "name": "Lace Detail Camisole",
+      "price": 699,
+      "category": "women",
+      "subcategory": "tops",
+      "image": "top4.jpg",
+      "description": "Silky camisole with delicate lace detail."
+    },
+    {
+      "id": 55,
+      "name": "Polka Dot Shirt Top",
+      "price": 779,
+      "category": "women",
+      "subcategory": "tops",
+      "image": "top5.jpg",
+      "description": "Polka dot button-down shirt styled as a top."
+    },
+    {
+      "id": 56,
+      "name": "Georgette Kurta",
+      "price": 899,
+      "category": "women",
+      "subcategory": "kurtas",
+      "image": "kurta1.jpg",
+      "description": "Light blue georgette kurta with embroidery."
+    },
+    {
+      "id": 57,
+      "name": "Cotton Straight Kurta",
+      "price": 799,
+      "category": "women",
+      "subcategory": "kurtas",
+      "image": "kurta2.jpg",
+      "description": "Comfortable cotton kurta in straight fit."
+    },
+    {
+      "id": 58,
+      "name": "Printed Anarkali Kurta",
+      "price": 1199,
+      "category": "women",
+      "subcategory": "kurtas",
+      "image": "kurta3.jpg",
+      "description": "Elegant printed Anarkali kurta with flared hem."
+    },
+    {
+      "id": 59,
+      "name": "Long A-Line Kurta",
+      "price": 999,
+      "category": "women",
+      "subcategory": "kurtas",
+      "image": "kurta4.jpg",
+      "description": "A-Line kurta with side slits and block prints."
+    },
+    {
+      "id": 60,
+      "name": "Embroidered Yoke Kurta",
+      "price": 1099,
+      "category": "women",
+      "subcategory": "kurtas",
+      "image": "kurta5.jpg",
+      "description": "Kurta featuring embroidered yoke and cuff details."
+    },
+    {
+      "id": 61,
+      "name": "Silk Banarasi Saree",
+      "price": 2999,
+      "category": "women",
+      "subcategory": "sarees",
+      "image": "saree1.jpg",
+      "description": "Rich Banarasi silk saree with golden zari."
+    },
+    {
+      "id": 62,
+      "name": "Chiffon Floral Saree",
+      "price": 1899,
+      "category": "women",
+      "subcategory": "sarees",
+      "image": "saree2.jpg",
+      "description": "Lightweight chiffon saree with floral print."
+    },
+    {
+      "id": 63,
+      "name": "Georgette Printed Saree",
+      "price": 1599,
+      "category": "women",
+      "subcategory": "sarees",
+      "image": "saree3.jpg",
+      "description": "Georgette saree with abstract print and border."
+    },
+    {
+      "id": 64,
+      "name": "Cotton Handloom Saree",
+      "price": 1299,
+      "category": "women",
+      "subcategory": "sarees",
+      "image": "saree4.jpg",
+      "description": "Handloom cotton saree with traditional motifs."
+    },
+    {
+      "id": 65,
+      "name": "Satin Embellished Saree",
+      "price": 2499,
+      "category": "women",
+      "subcategory": "sarees",
+      "image": "saree5.jpg",
+      "description": "Satin saree embellished with stones and sequins."
+    },
+    {
+      "id": 66,
+      "name": "Skinny Blue Jeans",
+      "price": 1099,
+      "category": "women",
+      "subcategory": "jeans",
+      "image": "jeans1.jpg",
+      "description": "High-stretch skinny jeans in classic blue."
+    },
+    {
+      "id": 67,
+      "name": "Boyfriend Fit Jeans",
+      "price": 1199,
+      "category": "women",
+      "subcategory": "jeans",
+      "image": "jeans2.jpg",
+      "description": "Relaxed boyfriend fit jeans with rolled cuffs."
+    },
+    {
+      "id": 68,
+      "name": "Wide Leg Jeans",
+      "price": 1299,
+      "category": "women",
+      "subcategory": "jeans",
+      "image": "jeans3.jpg",
+      "description": "Wide-leg denim jeans for a retro look."
+    },
+    {
+      "id": 69,
+      "name": "Cropped Flare Jeans",
+      "price": 999,
+      "category": "women",
+      "subcategory": "jeans",
+      "image": "jeans4.jpg",
+      "description": "Cropped flare jeans with raw hem."
+    },
+    {
+      "id": 70,
+      "name": "High-Waist Mom Jeans",
+      "price": 1199,
+      "category": "women",
+      "subcategory": "jeans",
+      "image": "jeans5.jpg",
+      "description": "Vintage-style high-waist mom jeans."
+    },
+    {
+      "id": 71,
+      "name": "Classic Denim Shirt",
+      "price": 899,
+      "category": "men",
+      "subcategory": "shirts",
+      "image": "shirt1.jpg",
+      "description": "Regular fit full sleeve denim shirt."
+    },
+    {
+      "id": 72,
+      "name": "Oxford Casual Shirt",
+      "price": 799,
+      "category": "men",
+      "subcategory": "shirts",
+      "image": "shirt2.jpg",
+      "description": "Oxford cloth shirt with button-down collar."
+    },
+    {
+      "id": 73,
+      "name": "Checked Flannel Shirt",
+      "price": 949,
+      "category": "men",
+      "subcategory": "shirts",  
+      "image": "shirt3.jpg",
+      "description": "Cozy flannel shirt with check pattern."
+    },
+    {
+      "id": 74,
+      "name": "Linen Summer Shirt",
+      "price": 1099,
+      "category": "men",
+      "subcategory": "shirts",
+      "image": "shirt4.jpg",
+      "description": "Breathable linen shirt for warm weather."
+    },
+    {
+      "id": 75,
+      "name": "Formal Dress Shirt",
+      "price": 1249,
+      "category": "men",
+      "subcategory": "shirts",
+      "image": "shirt5.jpg",
+      "description": "Slim fit formal shirt for office wear."
+    },
+    {
+      "id": 76,
+      "name": "Graphic Print T-Shirt",
+      "price": 499,
+      "category": "men",
+      "subcategory": "t-shirts",
+      "image": "tshirt1.jpg",
+      "description": "Crew neck t-shirt with cool graphic print."
+    },
+    {
+      "id": 77,
+      "name": "Basic V-Neck T-Shirt",
+      "price": 449,
+      "category": "men",
+      "subcategory": "t-shirts",
+      "image": "tshirt2.jpg",
+      "description": "Soft cotton V-neck t-shirt in solid colors."
+    },
+    {
+      "id": 78,
+      "name": "Striped Polo T-Shirt",
+      "price": 599,
+      "category": "men",
+      "subcategory": "t-shirts",
+      "image": "tshirt3.jpg",
+      "description": "Striped polo tee with contrast collar."
+    },
+    {
+      "id": 79,
+      "name": "Long Sleeve T-Shirt",
+      "price": 549,
+      "category": "men",
+      "subcategory": "t-shirts",
+      "image": "tshirt4.jpg",
+      "description": "Long sleeve basic t-shirt for layering."  
+    },
+    {
+      "id": 80,
+      "name": "Graphic Baseball Tee",
+      "price": 699,
+      "category": "men",
+      "subcategory": "t-shirts",
+      "image": "tshirt5.jpg",
+      "description": "Contrasting sleeve baseball tee with logo."  
+    },
+    {
+      "id": 81,
+      "name": "Slim Fit Blue Jeans",
+      "price": 1199,
+      "category": "men",
+      "subcategory": "jeans",
+      "image": "menjeans1.jpg",
+      "description": "Classic slim fit jeans in dark wash."
+    },
+    {
+      "id": 82,
+      "name": "Relaxed Fit Jeans",
+      "price": 1299,
+      "category": "men",
+      "subcategory": "jeans",
+      "image": "menjeans2.jpg",
+      "description": "Comfortable relaxed fit denim jeans."
+    },
+    {
+      "id": 83,
+      "name": "Distressed Jeans",
+      "price": 1399,
+      "category": "men",
+      "subcategory": "jeans",
+      "image": "menjeans3.jpg",
+      "description": "Trendy distressed look jeans."
+    },
+    {
+      "id": 84,
+      "name": "Black Skinny Jeans",
+      "price": 1199,
+      "category": "men",
+      "subcategory": "jeans",
+      "image": "menjeans4.jpg",
+      "description": "Black denim skinny jeans for a sleek look."
+    },
+    {
+      "id": 85,
+      "name": "Cargo Style Jeans",
+      "price": 1499,
+      "category": "men",
+      "subcategory": "jeans",
+      "image": "menjeans5.jpg",
+      "description": "Jeans with cargo pockets and tapered leg."
+    },
+    {
+      "id": 86,
+      "name": "Cotton Peplum Top",
+      "price": 699,
+      "category": "women",
+      "subcategory": "tops",
+      "image": "top6.jpg",
+      "description": "Peplum hem top in soft cotton."
+    },
+    {
+      "id": 87,
+      "name": "Sleeveless Ruffle Top",
+      "price": 649,
+      "category": "women",
+      "subcategory": "tops",
+      "image": "top7.jpg",
+      "description": "Sleeveless top with ruffle neckline."  
+    },
+    {
+      "id": 88,
+      "name": "Off-Shoulder Crop Top",
+      "price": 749,
+      "category": "women",
+      "subcategory": "tops",
+      "image": "top8.jpg",
+      "description": "Off-shoulder cropped top with elastic hem."
+    },
+    {
+      "id": 89,
+      "name": "Bell Sleeve Top",
+      "price": 799,
+      "category": "women",
+      "subcategory": "tops",
+      "image": "top9.jpg",
+      "description": "Top with dramatic bell sleeves."  
+    },
+    {
+      "id": 90,
+      "name": "Athleisure Tank Top",
+      "price": 599,
+      "category": "women",
+      "subcategory": "tops",
+      "image": "top10.jpg",
+      "description": "Quick-dry tank top for workouts."
+    },
+    {
+      "id": 91,
+      "name": "Silk Straight Kurta",
+      "price": 1299,
+      "category": "women",
+      "subcategory": "kurtas",
+      "image": "kurta6.jpg",
+      "description": "Silk kurta with side slit and straight cut."
+    },
+    {
+      "id": 92,
+      "name": "Embroidered A-Line Kurta",
+      "price": 1199,
+      "category": "women",
+      "subcategory": "kurtas",
+      "image": "kurta7.jpg",
+      "description": "A-Line kurta adorned with embroidery."
+    },
+    {
+      "id": 93,
+      "name": "Printed Palazzo Kurta",
+      "price": 1399,
+      "category": "women",
+      "subcategory": "kurtas",
+      "image": "kurta8.jpg",
+      "description": "Kurta and palazzo set with block print."
+    },
+    {
+      "id": 94,
+      "name": "Angrakha Style Kurta",
+      "price": 1099,
+      "category": "women",
+      "subcategory": "kurtas",
+      "image": "kurta9.jpg",
+      "description": "Angrakha kurta with side tie detail."
+    },
+    {
+      "id": 95,
+      "name": "Mirror Work Kurta",
+      "price": 1499,
+      "category": "women",
+      "subcategory": "kurtas",
+      "image": "kurta10.jpg",
+      "description": "Kurta featuring traditional mirror work."
+    },
+    {
+      "id": 96,
+      "name": "Woven Silk Saree",
+      "price": 2599,
+      "category": "women",
+      "subcategory": "sarees",
+      "image": "saree6.jpg",
+      "description": "Handwoven silk saree with elegant motifs."
+    },
+    {
+      "id": 97,
+      "name": "Chiffon Ombre Saree",
+      "price": 1799,
+      "category": "women",
+      "subcategory": "sarees",
+      "image": "saree7.jpg",
+      "description": "Ombre dyed chiffon saree in pastel shades."
+    },
+    {
+      "id": 98,
+      "name": "Sequin Party Saree",
+      "price": 2999,
+      "category": "women",
+      "subcategory": "sarees",
+      "image": "saree8.jpg",
+      "description": "Glamorous sequin saree for special events."
+    },
+    {
+      "id": 99,
+      "name": "Banarasi Cotton Saree",
+      "price": 2199,
+      "category": "women",
+      "subcategory": "sarees",
+      "image": "saree9.jpg",
+      "description": "Banarasi cotton saree with zari border."
+    },
+    {
+      "id": 100,
+      "name": "Madhubani Print Saree",
+      "price": 1999,
+      "category": "women",
+      "subcategory": "sarees",
+      "image": "saree10.jpg",
+      "description": "Handpainted Madhubani print saree."
+    },
+    {
+      "id": 101,
+      "name": "Wide Leg White Jeans",
+      "price": 1099,
+      "category": "women",
+      "subcategory": "jeans",
+      "image": "jeans6.jpg",
+      "description": "Wide leg jeans in crisp white."
+    },
+    {
+      "id": 102,
+      "name": "Distressed Ripped Jeans",
+      "price": 1199,
+      "category": "women",
+      "subcategory": "jeans",
+      "image": "jeans7.jpg",
+      "description": "Distressed jeans with ripped knees."
+    },
+    {
+      "id": 103,
+      "name": "Bootcut Blue Jeans",
+      "price": 1249,
+      "category": "women",
+      "subcategory": "jeans",
+      "image": "jeans8.jpg",
+      "description": "Classic bootcut jeans in indigo wash."
+    },
+    {
+      "id": 104,
+      "name": "High-Rise Black Jeans",
+      "price": 1299,
+      "category": "women",
+      "subcategory": "jeans",
+      "image": "jeans9.jpg",
+      "description": "Sleek high-rise black jeans."
+    },
+    {
+      "id": 105,
+      "name": "Culotte Denim Jeans",
+      "price": 1199,
+      "category": "women",
+      "subcategory": "jeans",
+      "image": "jeans10.jpg",
+      "description": "Culotte style denim jeans."
+    },
+    {
+      "id": 106,
+      "name": "Chambray Shirt",
+      "price": 849,
+      "category": "men",
+      "subcategory": "shirts",
+      "image": "shirt6.jpg",
+      "description": "Light chambray shirt for casual wear."
+    },
+    {
+      "id": 107,
+      "name": "Denim Overshirt",
+      "price": 1249,
+      "category": "men",
+      "subcategory": "shirts",
+      "image": "shirt7.jpg",
+      "description": "Denim overshirt with chest pockets."
+    },
+    {
+      "id": 108,
+      "name": "Flannel Check Shirt",
+      "price": 899,
+      "category": "men",
+      "subcategory": "shirts",
+      "image": "shirt8.jpg",
+      "description": "Soft flannel shirt in check pattern."
+    },
+    {
+      "id": 109,
+      "name": "Pinstripe Dress Shirt",
+      "price": 1099,
+      "category": "men",
+      "subcategory": "shirts",
+      "image": "shirt9.jpg",
+      "description": "Pinstripe formal shirt for office."
+    },
+    {
+      "id": 110,
+      "name": "Linen Blend Shirt",
+      "price": 999,
+      "category": "men",
+      "subcategory": "shirts",
+      "image": "shirt10.jpg",
+      "description": "Breathable linen blend shirt."
+    },
+    {
+      "id": 111,
+      "name": "Pocket Tee",
+      "price": 499,
+      "category": "men",
+      "subcategory": "t-shirts",
+      "image": "tshirt6.jpg",
+      "description": "Casual tee with chest pocket detail."
+    },
+    {
+      "id": 112,
+      "name": "Henley Long Sleeve Tee",
+      "price": 599,
+      "category": "men",
+      "subcategory": "t-shirts",
+      "image": "tshirt7.jpg",
+      "description": "Henley style long sleeve t-shirt."
+    },
+    {
+      "id": 113,
+      "name": "Muscle Fit Tank T-Shirt",
+      "price": 549,
+      "category": "men",
+      "subcategory": "t-shirts",
+      "image": "tshirt8.jpg",
+      "description": "Sleeveless muscle fit tank top."
+    },
+    {
+      "id": 114,
+      "name": "Stripe Crew Neck Tee",
+      "price": 599,
+      "category": "men",
+      "subcategory": "t-shirts",
+      "image": "tshirt9.jpg",
+      "description": "Striped crew neck tee in cotton."
+    },
+    {
+      "id": 115,
+      "name": "Bamboo Fabric Tee",
+      "price": 649,
+      "category": "men",
+      "subcategory": "t-shirts",
+      "image": "tshirt10.jpg",
+      "description": "Eco-friendly bamboo fabric t-shirt."
+    },
+    {
+      "id": 116,
+      "name": "Straight Fit Jeans",
+      "price": 1099,
+      "category": "men",
+      "subcategory": "jeans",
+      "image": "menjeans6.jpg",
+      "description": "Classic straight fit jeans."
+    },
+    {
+      "id": 117,
+      "name": "Relaxed Cargo Jeans",
+      "price": 1399,
+      "category": "men",
+      "subcategory": "jeans",
+      "image": "menjeans7.jpg",
+      "description": "Jeans with cargo pockets."
+    },
+    {
+      "id": 118,
+      "name": "Flexible Stretch Jeans",
+      "price": 1199,
+      "category": "men",
+      "subcategory": "jeans",
+      "image": "menjeans8.jpg",
+      "description": "Denim with flexible stretch fabric."
+    },
+    {
+      "id": 119,
+      "name": "Light Wash Slim Jeans",
+      "price": 1149,
+      "category": "men",
+      "subcategory": "jeans",
+      "image": "menjeans9.jpg",
+      "description": "Slim fit light wash jeans."
+    },
+    {
+      "id": 120,
+      "name": "Dark Indigo Relaxed Jeans",
+      "price": 1299,
+      "category": "men",
+      "subcategory": "jeans",
+      "image": "menjeans10.jpg",
+      "description": "Relaxed fit dark indigo jeans."
+    }
+  ]
+  

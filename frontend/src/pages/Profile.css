@@ -1,0 +1,146 @@
+.profile-container {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #d1036a;
+  font-size: 28px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.profile-tabs button {
+  padding: 10px 25px;
+  background-color: #f3f3f3;
+  color: #333;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-tabs button:hover {
+  background-color: #ffe4f0;
+}
+
+.profile-tabs .active {
+  background-color: #d1036a;
+  color: white;
+  border-color: #d1036a;
+}
+
+.profile-info p {
+  margin: 12px 0;
+  font-size: 17px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.logout-btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: #d1036a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #a70253;
+}
+
+/* Orders Section */
+.orders-section {
+  padding: 10px;
+}
+
+.order-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-left: 5px solid #d1036a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.order-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.order-card h4 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.order-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.order-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.order-card ul li {
+  color: #444;
+  font-size: 15px;
+}
+
+/* Order item styles with images */
+.order-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.order-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.order-item-info p {
+  margin: 4px 0;
+  color: #444;
+  font-size: 15px;
+}
