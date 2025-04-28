@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-               'https://github.com/Kaviyadharshini1211/ShopNow.git'
+                git(
+                    url: 'https://github.com/Kaviyadharshini1211/ShopNow.git',
+                    branch: 'master' // or your branch name
+                )
             }
         }
 
