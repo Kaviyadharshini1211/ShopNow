@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "https://shoppica.onrender.com/api/auth";
 
 // User Login
 export const loginUser = async (email, password) => {
