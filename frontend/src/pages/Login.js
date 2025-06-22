@@ -20,7 +20,7 @@ const Login = () => {
 
     try {
       console.log("Sending Login Request...");
-      const response = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+      const response = await axios.post("https://shoppica.onrender.com/api/auth/login", { email, password });
 
       console.log("Response from Server:", response.data);
 
