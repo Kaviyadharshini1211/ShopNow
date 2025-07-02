@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaShoppingCart, FaUserCircle } from "react-icons/fa";
+import { FaShoppingCart, FaUserCircle, FaHeart} from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { setSearchQuery } from "../redux/slices/productSlice";
 import "./Navbar.css";
@@ -51,6 +51,7 @@ const Navbar = () => {
         <Link to="/" className="nav-item" onClick={handleLinkClick}>Home</Link>
         <Link to="/products" className="nav-item" onClick={handleLinkClick}>Products</Link>
 
+        {/* Women Dropdown */}
         <div
           className="nav-item dropdown"
           onMouseEnter={() => setShowWomen(true)}
@@ -59,14 +60,21 @@ const Navbar = () => {
           Women
           {showWomen && (
             <div className="dropdown-content">
+              <Link to="/category/women/kurti" onClick={handleLinkClick}>Kurti</Link>
+              <Link to="/category/women/summer dress" onClick={handleLinkClick}>Summer Dress</Link>
               <Link to="/category/women/tops" onClick={handleLinkClick}>Tops</Link>
-              <Link to="/category/women/kurtas" onClick={handleLinkClick}>Kurtas</Link>
-              <Link to="/category/women/sarees" onClick={handleLinkClick}>Sarees</Link>
+              <Link to="/category/women/lehenga" onClick={handleLinkClick}>Lehenga</Link>
               <Link to="/category/women/jeans" onClick={handleLinkClick}>Jeans</Link>
+              <Link to="/category/women/palazzo pants" onClick={handleLinkClick}>Palazzo Pants</Link>
+              <Link to="/category/women/saree" onClick={handleLinkClick}>Saree</Link>
+              <Link to="/category/women/trousers" onClick={handleLinkClick}>Trousers</Link>
+              <Link to="/category/women/skirt" onClick={handleLinkClick}>Skirt</Link>
+                 
             </div>
           )}
         </div>
 
+        {/* Men Dropdown */}
         <div
           className="nav-item dropdown"
           onMouseEnter={() => setShowMen(true)}
@@ -75,8 +83,15 @@ const Navbar = () => {
           Men
           {showMen && (
             <div className="dropdown-content">
-              <Link to="/category/men/shirts" onClick={handleLinkClick}>Shirts</Link>
-              <Link to="/category/men/tshirts" onClick={handleLinkClick}>T-Shirts</Link>
+              <Link to="/category/men/formal shirt" onClick={handleLinkClick}>Formal Shirt</Link>
+              <Link to="/category/men/hoodie" onClick={handleLinkClick}>Hoodie</Link>
+              <Link to="/category/men/trousers" onClick={handleLinkClick}>Trousers</Link>
+              <Link to="/category/men/sweatshirt" onClick={handleLinkClick}>Sweatshirt</Link>
+              <Link to="/category/men/track pants" onClick={handleLinkClick}>Track Pants</Link>
+              <Link to="/category/men/kurta" onClick={handleLinkClick}>Kurta</Link>
+              <Link to="/category/men/blazer" onClick={handleLinkClick}>Blazer</Link>
+              <Link to="/category/men/t-shirt" onClick={handleLinkClick}>T-Shirt</Link>
+              <Link to="/category/men/denim jacket" onClick={handleLinkClick}>Denim Jacket</Link>
               <Link to="/category/men/jeans" onClick={handleLinkClick}>Jeans</Link>
             </div>
           )}
@@ -85,6 +100,11 @@ const Navbar = () => {
         <Link to="/cart" className="nav-item cart-icon" onClick={handleLinkClick}>
           <FaShoppingCart />
         </Link>
+
+         <Link to="/wishlist" className="nav-item">
+  <FaHeart style={{ marginRight: "5px" }} /> Wishlist
+</Link>
+    
 
         {!user ? (
           <>

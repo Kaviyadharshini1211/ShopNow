@@ -1,32 +1,80 @@
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .product-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 16px;
-    width: 220px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-card img {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    margin-bottom: 12px;
-  }
-  
-  .product-card h3 {
-    font-size: 18px;
-    margin: 8px 0;
-  }
-  
-  .product-card p {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-  }
-  .product-link {
-    text-decoration: none;
-    color: inherit;
-  }
-  
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  width: 220px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.product-card h3 {
+  font-size: 15px;
+  margin: 8px 0;
+  font-weight: 500;
+  color: #333;
+}
+
+/* 📦 Price Section */
+.price-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.discounted-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #d10072;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.discount-label {
+  color: green;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ❤️ Wishlist Icon */
+.wishlist-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.brand-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}

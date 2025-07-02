@@ -3,9 +3,9 @@ import { useDispatch } from "react-redux";
 import { login } from "../redux/slices/authSlice";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { FaGoogle, FaFacebook } from "react-icons/fa";
-import Navbar from "../components/Navbar"; 
-import "./Login.css"; // ✅ Keeps your existing CSS
+import { GoogleLogin } from "@react-oauth/google";
+import Navbar from "../components/Navbar";
+import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -19,68 +19,95 @@ const Login = () => {
     setError("");
 
     try {
-      console.log("Sending Login Request...");
-      const response = await axios.post("http://localhost:5000/api/auth/login", { email, password });
-
-      console.log("Response from Server:", response.data);
+      const response = await axios.post("http://localhost:5000/api/auth/login", {
+        email,
+        password,
+      });
 
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
-        dispatch(login(response.data.user)); // Save user in Redux
+        dispatch(login(response.data.user));
         alert("Logged in successfully!");
-        navigate("/"); // ✅ Redirect to Home Page
+        navigate("/");
       } else {
         setError("Login failed. Please try again.");
       }
     } catch (error) {
-      console.error("Login Error:", error);
       setError(error.response?.data?.message || "Invalid email or password.");
+    }
+  };
+
+  const handleGoogleSuccess = async (credentialResponse) => {
+    try {
+      const res = await axios.post("http://localhost:5000/api/auth/google", {
+        token: credentialResponse.credential,
+      });
+
+      // ✅ destructure properly
+      const { token, user } = res.data;
+
+      localStorage.setItem("token", token);
+      dispatch(login(user)); // ✅ only user object
+      alert("Logged in with Google successfully!");
+      navigate("/");
+    } catch (err) {
+      console.error("Google Login Error:", err);
+      setError("Google login failed.");
     }
   };
 
   return (
     <>
-      <Navbar /> {/* ✅ Keeps navbar without affecting layout */}
+      <Navbar />
       <div className="login-container">
         <div className="login-box">
-          <h2>Welcome to <span>ShopNow</span></h2>
-          
-          {/* ✅ Social Login Buttons (No changes) */}
-          <button className="social-btn google"><FaGoogle /> Login with Google</button>
-          <button className="social-btn facebook"><FaFacebook /> Login with Facebook</button>
+          <h2>
+            Welcome to <span>ShopNow</span>
+          </h2>
+
+          {/* ✅ Google Login Button */}
+          <div className="google-btn-wrapper">
+            <GoogleLogin
+              onSuccess={handleGoogleSuccess}
+              onError={() => setError("Google login failed.")}
+            />
+          </div>
+
           <div className="divider">OR</div>
 
-          {/* ✅ Login Form */}
           <form onSubmit={handleSubmit}>
-            <input 
-              type="email" 
-              placeholder="Email" 
-              required 
-              value={email} 
-              onChange={(e) => setEmail(e.target.value)} 
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <input 
-              type="password" 
-              placeholder="Password" 
-              required 
-              value={password} 
-              onChange={(e) => setPassword(e.target.value)} 
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
 
-            {/* ✅ Remember Me & Forgot Password (Kept same) */}
             <div className="options">
-              <label><input type="checkbox" /> Remember me</label>
+              <label>
+                <input type="checkbox" /> Remember me
+              </label>
               <a href="#">Forgot Password?</a>
             </div>
 
-            <button type="submit" className="login-btn">Login</button>
+            <button type="submit" className="login-btn">
+              Login
+            </button>
           </form>
 
-          {/* ✅ Error Message */}
           {error && <p className="error-message">{error}</p>}
 
-          {/* ✅ Register Link (Kept same) */}
-          <p className="register-text">Don't have an account? <a href="/register">Register</a></p>
+          <p className="register-text">
+            Don't have an account? <a href="/register">Register</a>
+          </p>
         </div>
       </div>
     </>

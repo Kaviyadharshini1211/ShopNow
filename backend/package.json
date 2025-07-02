@@ -1,7 +1,6 @@
 {
     "name": "backend",
     "type": "module",
-
     "version": "1.0.0",
     "description": "AI-powered smart shopping platform backend",
     "main": "server.js",
@@ -14,9 +13,10 @@
         "cors": "^2.8.5",
         "dotenv": "^16.4.7",
         "express": "^4.21.2",
+        "google-auth-library": "^10.1.0",
         "ioredis": "^5.6.0",
         "jsonwebtoken": "^9.0.2",
-        "mongoose": "^7.8.6",
+        "mongoose": "^7.8.7",
         "redis": "^4.7.0"
     },
     "devDependencies": {
@@ -28,5 +28,4 @@
     "keywords": [],
     "author": "",
     "license": "ISC"
-    
 }

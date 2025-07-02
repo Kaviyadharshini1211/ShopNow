@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import ProductCard from '../components/ProductCard';
-//import './CategoryPage.css';
+// import './CategoryPage.css';
 
 const CategoryPage = () => {
   const { gender, subcategory } = useParams();
@@ -16,22 +16,25 @@ const CategoryPage = () => {
 
         const filtered = allProducts.filter(
           (product) =>
-            product.gender.toLowerCase() === gender.toLowerCase() &&
-            product.subcategory.toLowerCase() === subcategory.toLowerCase()
+            product?.gender?.toLowerCase() === gender.toLowerCase() &&
+            product?.subcategory?.toLowerCase() === subcategory.toLowerCase()
         );
 
         setFilteredProducts(filtered);
       } catch (error) {
-        console.error('Failed to fetch products:', error);
+        console.error('Failed to fetch products:', error.message);
       }
     };
 
     fetchProducts();
   }, [gender, subcategory]);
 
+  const capitalize = (str) =>
+    str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
   return (
     <div className="category-page">
-      <h2>{gender.toUpperCase()} - {subcategory.toUpperCase()}</h2>
+      <h2>{capitalize(gender)} — {capitalize(subcategory)}</h2>
       <div className="product-grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
