@@ -19,7 +19,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", {
+      const response = await axios.post("https://shoppica.onrender.com/api/auth/login", {
         email,
         password,
       });
@@ -39,7 +39,7 @@ const Login = () => {
 
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/google", {
+      const res = await axios.post("https://shoppica.onrender.com/api/auth/google", {
         token: credentialResponse.credential,
       });
 
