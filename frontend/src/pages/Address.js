@@ -26,7 +26,7 @@ const Address = () => {
     // fetch saved address
     const fetchAddress = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/users/profile/${user._id}`);
+        const res = await axios.get(`https://shoppica.onrender.com/api/users/profile/${user._id}`);
         if (res.data?.address) {
           setSavedAddress(res.data);
         } else {
@@ -46,7 +46,7 @@ const Address = () => {
 
   const handleSaveAddress = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/users/profile/${user._id}`, {
+      await axios.put(`https://shoppica.onrender.com/api/users/profile/${user._id}`, {
         ...user,
         ...formData,
       });
