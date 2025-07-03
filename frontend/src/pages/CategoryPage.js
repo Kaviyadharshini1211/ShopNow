@@ -11,7 +11,7 @@ const CategoryPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/products');
+        const res = await axios.get('https://shoppica.onrender.com/api/products');
         const allProducts = res.data;
 
         const filtered = allProducts.filter(
