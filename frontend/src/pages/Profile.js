@@ -35,7 +35,7 @@ const Profile = () => {
   const handleSave = async () => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/users/profile/${user._id}`,
+        `https://shoppica.onrender.com/api/users/profile/${user._id}`,
         formData
       );
       alert("Profile updated successfully");
