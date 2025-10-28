@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
   const isWished = wishlist.some((item) => item.id === product.id);
 
   const toggleWishlist = (e) => {
-    e.preventDefault(); // Prevents navigation when clicking the heart
+    e.preventDefault(); // Prevent navigation when clicking the heart
     if (isWished) {
       dispatch(removeFromWishlist(product.id));
     } else {
@@ -19,22 +19,27 @@ const ProductCard = ({ product }) => {
     }
   };
 
+  // 🔹 Fix: Handle both old and new formats
+  const imageSrc =
+    product.thumbnail || (product.images && product.images[0]) || product.image || "/placeholder.jpg";
+
+  const productName = product.title || product.name || "Unnamed Product";
+
   const discount = product.originalPrice
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
-    : 0;
+    : product.discountPercentage || 0;
 
   return (
     <Link to={`/product/${product.id}`} className="product-link">
       <div className="product-card">
-        <img src={product.image} alt={product.name} />
+        <img src={imageSrc} alt={productName} className="product-image" />
 
         <div className="wishlist-icon" onClick={toggleWishlist}>
           {isWished ? <FaHeart color="red" /> : <FaRegHeart />}
         </div>
 
-       <p className="brand-name">{product.brand}</p>
-        <h3>{product.name}</h3>
-
+        <p className="brand-name">{product.brand}</p>
+        <h3>{productName}</h3>
 
         <div className="price-row">
           <span className="discounted-price">₹{product.price}</span>

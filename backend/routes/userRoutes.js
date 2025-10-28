@@ -3,14 +3,13 @@ import express from "express";
 import {
   getUserProfile,
   updateUserProfile,
+  toggleWishlist, // ✅ Import new controller
 } from "../controllers/userController.js";
 
 const router = express.Router();
 
-// ✅ Get user profile by ID (e.g., /api/users/profile/64abc123...)
 router.get("/profile/:id", getUserProfile);
-
-// ✅ Update user profile by ID (including address, mobile, etc.)
 router.put("/profile/:id", updateUserProfile);
+router.post("/wishlist/:id", toggleWishlist); // ✅ Add this
 
 export default router;

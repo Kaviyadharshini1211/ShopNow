@@ -46,15 +46,15 @@ const ProductDetails = () => {
 
     const itemToAdd = {
       id: product.id,
-      name: product.name,
+      name: product.title || product.name,
       price: product.price,
-      image: product.image,
+      image: product.thumbnail || (product.images && product.images[0]) || product.image,
       size: selectedSize,
       quantity: 1,
     };
 
     dispatch(addToCart(itemToAdd));
-    alert(`Added "${product.name}" to cart - Size: ${selectedSize}`);
+    alert(`Added "${product.title || product.name}" to cart - Size: ${selectedSize}`);
     setErrorMsg("");
   };
 
@@ -73,20 +73,25 @@ const ProductDetails = () => {
   const discount =
     product.originalPrice && product.price
       ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
-      : 0;
+      : product.discountPercentage || 0;
+
+  // 🔹 Image fix — supports new + old keys
+  const mainImage =
+    product.thumbnail || (product.images && product.images[0]) || product.image || "/placeholder.jpg";
+
+  const productName = product.title || product.name || "Unnamed Product";
 
   return (
     <div className="product-detail-container">
       <img
-        src={product.image}
-        alt={product.name}
+        src={mainImage}
+        alt={productName}
         className="product-detail-image"
       />
 
       <div className="product-detail-info">
         <p className="brand-name">{product.brand}</p>
-         <h2>{product.name}</h2>
-
+        <h2>{productName}</h2>
 
         {/* 🏷️ Discount Section */}
         <div className="product-price-row">
@@ -140,7 +145,15 @@ const ProductDetails = () => {
           <div className="recommendation-list">
             {recommendations.map((item) => (
               <div key={item._id || item.id} className="recommended-product-card">
-                <img src={item.image} alt={item.title || item.name} />
+                <img
+                  src={
+                    item.thumbnail ||
+                    (item.images && item.images[0]) ||
+                    item.image ||
+                    "/placeholder.jpg"
+                  }
+                  alt={item.title || item.name}
+                />
                 <p>{item.title || item.name}</p>
                 <p>₹{item.price}</p>
               </div>

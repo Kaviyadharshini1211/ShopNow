@@ -53,15 +53,18 @@ const Checkout = () => {
       userId: user._id || user.id,
       date: new Date().toISOString().split("T")[0],
       total,
-      items: cartItems.map(({ id, name, quantity, image }) => ({ id, name, quantity, image })),
+      items: cartItems.map(({ id, name, title, quantity, image, thumbnail, images }) => ({
+        id,
+        name: title || name,
+        quantity,
+        image: thumbnail || (images && images[0]) || image || "/placeholder.jpg",
+      })),
       paymentMethod: method,
     };
 
     dispatch(addOrder(order));
     dispatch(clearCart());
-    
     navigate("/order-success");
-
   };
 
   return (
@@ -73,16 +76,22 @@ const Checkout = () => {
           <p>Your cart is empty.</p>
         ) : (
           <>
-            {cartItems.map((item) => (
-              <div className="checkout-item" key={item.id}>
-                <img src={item.image} alt={item.name} />
-                <div className="checkout-details">
-                  <h4>{item.name}</h4>
-                  <p>Qty: {item.quantity}</p>
-                  <p>₹{item.price}</p>
+            {cartItems.map((item) => {
+              const imageSrc =
+                item.thumbnail || (item.images && item.images[0]) || item.image || "/placeholder.jpg";
+              const name = item.title || item.name || "Unnamed Product";
+
+              return (
+                <div className="checkout-item" key={item.id}>
+                  <img src={imageSrc} alt={name} />
+                  <div className="checkout-details">
+                    <h4>{name}</h4>
+                    <p>Qty: {item.quantity}</p>
+                    <p>₹{item.price}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
 
             <div className="coupon-box">
               <input
@@ -121,9 +130,24 @@ const Checkout = () => {
             <div className="payment-section">
               <h3>Select Payment Method</h3>
               <div className="payment-options">
-                <button onClick={() => setMethod("upi")} className={method === "upi" ? "active" : ""}>UPI</button>
-                <button onClick={() => setMethod("card")} className={method === "card" ? "active" : ""}>Card</button>
-                <button onClick={() => setMethod("cod")} className={method === "cod" ? "active" : ""}>Cash on Delivery</button>
+                <button
+                  onClick={() => setMethod("upi")}
+                  className={method === "upi" ? "active" : ""}
+                >
+                  UPI
+                </button>
+                <button
+                  onClick={() => setMethod("card")}
+                  className={method === "card" ? "active" : ""}
+                >
+                  Card
+                </button>
+                <button
+                  onClick={() => setMethod("cod")}
+                  className={method === "cod" ? "active" : ""}
+                >
+                  Cash on Delivery
+                </button>
               </div>
 
               {/* UPI Payment */}
@@ -135,7 +159,9 @@ const Checkout = () => {
                     value={upiId}
                     onChange={(e) => setUpiId(e.target.value)}
                   />
-                  <button disabled={!upiId.trim()} onClick={handlePay}>Pay ₹{total}</button>
+                  <button disabled={!upiId.trim()} onClick={handlePay}>
+                    Pay ₹{total}
+                  </button>
                 </div>
               )}
 
