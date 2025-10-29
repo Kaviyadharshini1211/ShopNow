@@ -4,7 +4,8 @@ import { login } from "../redux/slices/authSlice";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
-import Navbar from "../components/Navbar";
+// ❌ REMOVE THIS LINE - Navbar is already in App.js
+// import Navbar from "../components/Navbar";
 import "./Login.css";
 
 const Login = () => {
@@ -43,11 +44,10 @@ const Login = () => {
         token: credentialResponse.credential,
       });
 
-      // ✅ destructure properly
       const { token, user } = res.data;
 
       localStorage.setItem("token", token);
-      dispatch(login(user)); // ✅ only user object
+      dispatch(login(user));
       alert("Logged in with Google successfully!");
       navigate("/");
     } catch (err) {
@@ -57,60 +57,58 @@ const Login = () => {
   };
 
   return (
-    <>
-      <Navbar />
-      <div className="login-container">
-        <div className="login-box">
-          <h2>
-            Welcome to <span>ShopNow</span>
-          </h2>
+    // ❌ REMOVE <Navbar /> from here - it's already in App.js
+    <div className="login-container">
+      <div className="login-box">
+        <h2>
+          Welcome to <span>ShopNow</span>
+        </h2>
 
-          {/* ✅ Google Login Button */}
-          <div className="google-btn-wrapper">
-            <GoogleLogin
-              onSuccess={handleGoogleSuccess}
-              onError={() => setError("Google login failed.")}
-            />
+        {/* ✅ Google Login Button */}
+        <div className="google-btn-wrapper">
+          <GoogleLogin
+            onSuccess={handleGoogleSuccess}
+            onError={() => setError("Google login failed.")}
+          />
+        </div>
+
+        <div className="divider">OR</div>
+
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <div className="options">
+            <label>
+              <input type="checkbox" /> Remember me
+            </label>
+            <a href="#">Forgot Password?</a>
           </div>
 
-          <div className="divider">OR</div>
+          <button type="submit" className="login-btn">
+            Login
+          </button>
+        </form>
 
-          <form onSubmit={handleSubmit}>
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+        {error && <p className="error-message">{error}</p>}
 
-            <div className="options">
-              <label>
-                <input type="checkbox" /> Remember me
-              </label>
-              <a href="#">Forgot Password?</a>
-            </div>
-
-            <button type="submit" className="login-btn">
-              Login
-            </button>
-          </form>
-
-          {error && <p className="error-message">{error}</p>}
-
-          <p className="register-text">
-            Don't have an account? <a href="/register">Register</a>
-          </p>
-        </div>
+        <p className="register-text">
+          Don't have an account? <a href="/register">Register</a>
+        </p>
       </div>
-    </>
+    </div>
   );
 };
 
