@@ -68,52 +68,49 @@ const ProductDetails = () => {
   };
 
   if (!product)
-    return <p className="loading">Loading or product not found...</p>;
+    return <p className="pd-loading">Loading or product not found...</p>;
 
   const discount =
     product.originalPrice && product.price
       ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
       : product.discountPercentage || 0;
 
-  // 🔹 Image fix — supports new + old keys
   const mainImage =
     product.thumbnail || (product.images && product.images[0]) || product.image || "/placeholder.jpg";
 
   const productName = product.title || product.name || "Unnamed Product";
 
   return (
-    <div className="product-detail-container">
+    <div className="pd-container">
       <img
         src={mainImage}
         alt={productName}
-        className="product-detail-image"
+        className="pd-image"
       />
 
-      <div className="product-detail-info">
-        <p className="brand-name">{product.brand}</p>
-        <h2>{productName}</h2>
+      <div className="pd-info">
+        <p className="pd-brand-name">{product.brand}</p>
+        <h2 className="pd-title">{productName}</h2>
 
-        {/* 🏷️ Discount Section */}
-        <div className="product-price-row">
-          <span className="discounted-price">₹{product.price}</span>
+        <div className="pd-price-row">
+          <span className="pd-discounted-price">₹{product.price}</span>
           {product.originalPrice && (
             <>
-              <span className="original-price">₹{product.originalPrice}</span>
-              <span className="discount-label">{discount}% OFF</span>
+              <span className="pd-original-price">₹{product.originalPrice}</span>
+              <span className="pd-discount-label">{discount}% OFF</span>
             </>
           )}
         </div>
 
-        <p>{product.description}</p>
+        <p className="pd-description">{product.description}</p>
 
-        {/* 👕 Size Selection */}
-        <div className="size-options-box">
-          <p>Select Size:</p>
-          <div className="size-button-group">
+        <div className="pd-size-options-box">
+          <p className="pd-size-label">Select Size:</p>
+          <div className="pd-size-button-group">
             {["XS", "S", "M", "L", "XL"].map((size) => (
               <button
                 key={size}
-                className={`size-btn ${selectedSize === size ? "selected" : ""}`}
+                className={`pd-size-btn ${selectedSize === size ? "pd-size-selected" : ""}`}
                 onClick={() => {
                   setSelectedSize(size);
                   setErrorMsg("");
@@ -123,28 +120,26 @@ const ProductDetails = () => {
               </button>
             ))}
           </div>
-          {errorMsg && <p className="error-msg">{errorMsg}</p>}
+          {errorMsg && <p className="pd-error-msg">{errorMsg}</p>}
         </div>
 
-        {/* ❤️ + 🛒 Buttons */}
-        <div className="product-detail-actions">
-          <button className="wishlist-btn" onClick={toggleWishlist}>
+        <div className="pd-actions">
+          <button className="pd-wishlist-btn" onClick={toggleWishlist}>
             {isWished ? <FaHeart color="red" /> : <FaRegHeart />} Wishlist
           </button>
 
-          <button className="add-to-cart-btn" onClick={handleAddToCart}>
+          <button className="pd-add-to-cart-btn" onClick={handleAddToCart}>
             Add to Cart
           </button>
         </div>
       </div>
 
-      {/* 🔁 Recommendations */}
       {recommendations.length > 0 && (
-        <div className="recommendations-section">
-          <h3>Recommended for You</h3>
-          <div className="recommendation-list">
+        <div className="pd-recommendations-section">
+          <h3 className="pd-recommendations-title">Recommended for You</h3>
+          <div className="pd-recommendation-list">
             {recommendations.map((item) => (
-              <div key={item._id || item.id} className="recommended-product-card">
+              <div key={item._id || item.id} className="pd-recommended-card">
                 <img
                   src={
                     item.thumbnail ||
@@ -153,9 +148,10 @@ const ProductDetails = () => {
                     "/placeholder.jpg"
                   }
                   alt={item.title || item.name}
+                  className="pd-recommended-img"
                 />
-                <p>{item.title || item.name}</p>
-                <p>₹{item.price}</p>
+                <p className="pd-recommended-name">{item.title || item.name}</p>
+                <p className="pd-recommended-price">₹{item.price}</p>
               </div>
             ))}
           </div>

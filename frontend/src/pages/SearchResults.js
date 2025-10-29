@@ -1,13 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import ProductCard from "../components/ProductCard";
-import "./Home.css"; // Use same styling
+import "./Home.css"; // Using same styling
 
 const SearchResults = () => {
   const { products, searchQuery } = useSelector((state) => state.products);
 
-  const filtered = products.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // Prevent runtime error (undefined.toLowerCase())
+  const safeSearch = (searchQuery ?? "").toLowerCase();
+
+  const filtered = (products ?? []).filter((product) =>
+    (product?.title ?? "").toLowerCase().includes(safeSearch)
   );
 
   return (

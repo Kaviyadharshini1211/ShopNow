@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { fetchProducts } from "./redux/slices/productSlice";
 import Address from "./pages/Address";
 import SearchResults from "./pages/SearchResults";
-import CategoryPage from "./pages/CategoryPage";
+
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -23,15 +23,20 @@ import "./styles.css";
 
 const App = () => {
   const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
+  // Pages that should NOT have the content wrapper padding
+  const fullHeightPages = ['/login', '/register'];
+  const isFullHeightPage = fullHeightPages.includes(location.pathname);
+
   return (
     <div className="app-container">
       <Navbar />
-      <div className="content">
+      <div className={isFullHeightPage ? "" : "content"}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -43,11 +48,9 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/search" element={<SearchResults />} />
-           <Route path="/orders" element={<Orders />} />
-           <Route path="/order-success" element={<OrderSuccess />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/order-success" element={<OrderSuccess />} />
           <Route path="/wishlist" element={<Wishlist />} />
-           
-          <Route path="/category/:gender/:subcategory" element={<CategoryPage />} />
         </Routes>
       </div>
     </div>

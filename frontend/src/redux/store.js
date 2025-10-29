@@ -6,8 +6,12 @@ import ordersReducer from "./slices/ordersSlice";
 import wishlistReducer from './slices/wishlistSlice';
 import addressReducer from './slices/addressSlice'; // ✅ Add this
 
+
+
 const store = configureStore({
   reducer: {
+        
+
     products: productReducer,
     auth: authReducer,
     cart: cartReducer,
