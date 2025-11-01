@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout, login } from "../redux/slices/authSlice"; // ✅ FIXED: added login
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import API from "../services/api";
 
 import "./Profile.css";
 
@@ -34,8 +34,8 @@ const Profile = () => {
 
   const handleSave = async () => {
     try {
-      const res = await axios.put(
-        `http://localhost:5000/api/users/profile/${user._id}`,
+      const res = await API.put(
+        `/users/profile/${user._id}`,
         formData
       );
       alert("Profile updated successfully");

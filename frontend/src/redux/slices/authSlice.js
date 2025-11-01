@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import API from "../../services/api";
 
 const authSlice = createSlice({
   name: "auth",
@@ -30,7 +30,7 @@ export const { login, logout, updateProfile } = authSlice.actions;
 // Async thunk to update backend + Redux
 export const updateUserProfile = (userId, data) => async (dispatch) => {
   try {
-    const res = await axios.put(`http://localhost:5000/api/users/profile/${userId}`, data);
+    const res = await API.put(`/users/profile/${userId}`, data);
     dispatch(login(res.data)); // or use updateProfile(res.data)
   } catch (err) {
     console.error("Failed to update profile:", err);

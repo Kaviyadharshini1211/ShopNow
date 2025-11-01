@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../redux/slices/authSlice";
-import axios from "axios";
+import API from "../services/api";
+
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 // ❌ REMOVE THIS LINE - Navbar is already in App.js
@@ -20,7 +21,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", {
+      const response = await API.post("/auth/login", {
         email,
         password,
       });
@@ -40,7 +41,7 @@ const Login = () => {
 
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/google", {
+      const res = await API.post("/auth/google", {
         token: credentialResponse.credential,
       });
 

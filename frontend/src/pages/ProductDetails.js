@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../redux/slices/cartSlice";
 import { addToWishlist, removeFromWishlist } from "../redux/slices/wishlistSlice";
 import { FaHeart, FaRegHeart, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { fetchSimilarProducts } from "../services/api";
+import API, { fetchSimilarProducts } from "../services/api";
 import "./ProductDetails.css";
 
 const ProductDetails = () => {
@@ -34,14 +34,14 @@ const ProductDetails = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       // 🧠 Fallback fetch if product not in Redux
-      fetch(`http://localhost:5000/api/products/${id}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data) setProduct(data);
-        })
-        .catch((err) =>
-          console.error("❌ Failed to fetch product details:", err)
-        );
+      API.get(`/products/${id}`)
+  .then((res) => {
+    if (res.data) setProduct(res.data);
+  })
+  .catch((err) => {
+    console.error("❌ Failed to fetch product details:", err);
+  });
+
     }
   }, [allProducts, id]);
 

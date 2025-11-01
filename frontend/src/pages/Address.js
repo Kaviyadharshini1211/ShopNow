@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import axios from "axios";
+
 import { useNavigate } from "react-router-dom";
 import "./Address.css";
-
+import API from "../services/api";
 const Address = () => {
   const navigate = useNavigate();
   const user = useSelector((state) => state.auth.user);
@@ -26,7 +26,7 @@ const Address = () => {
     // fetch saved address
     const fetchAddress = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/users/profile/${user._id}`);
+        const res = await API.get(`/users/profile/${user._id}`);
         if (res.data?.address) {
           setSavedAddress(res.data);
         } else {
@@ -46,7 +46,7 @@ const Address = () => {
 
   const handleSaveAddress = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/users/profile/${user._id}`, {
+      await API.put(`/users/profile/${user._id}`, {
         ...user,
         ...formData,
       });
