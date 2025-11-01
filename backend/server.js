@@ -5,7 +5,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import redisClient from "./config/redis.js"; // might be null if env missing
-
+import aiRoutes from "./routes/aiRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js"; // ✅ user routes added
 import orderRoutes from "./routes/orderRoutes.js";
@@ -38,6 +38,7 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/recommendations", recommendationRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/recommend", recommendRoutes);
+app.use("/api/ai", aiRoutes);
 
 // Test route
 app.get("/api/test", (req, res) => {

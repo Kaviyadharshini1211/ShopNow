@@ -32,7 +32,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-left">
         <Link to="/" className="brand-logo" onClick={handleLinkClick}>
-          ShopNow 🛍️
+          Shoppica 🛍️
         </Link>
       </div>
 
