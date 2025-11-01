@@ -1,15 +1,13 @@
-import axios from "axios";
+import API from "./api"; // ✅ same folder, so use './api'
 
-const API_URL = "http://localhost:5000/api/products";
-
-// Fetch All Products
+// 🟢 Fetch All Products
 export const getProducts = async () => {
-  const response = await axios.get(API_URL);
+  const response = await API.get("/products");
   return response.data;
 };
 
-// Fetch Single Product by ID
+// 🟣 Fetch Single Product by ID
 export const getProductById = async (id) => {
-  const response = await axios.get(`${API_URL}/${id}`);
+  const response = await API.get(`/products/${id}`);
   return response.data;
 };

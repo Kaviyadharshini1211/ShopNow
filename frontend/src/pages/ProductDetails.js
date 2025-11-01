@@ -18,12 +18,11 @@ const ProductDetails = () => {
   const [similarProducts, setSimilarProducts] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
 
-  // ✅ Handle both MongoDB _id and numeric id
   const isWished = wishlist.some(
     (item) => item._id === id || item.id?.toString() === id
   );
 
-  // ✅ Find product by either numeric ID or MongoDB _id
+  // ✅ Load product from Redux or backend
   useEffect(() => {
     const found = allProducts?.find(
       (p) => p._id === id || p.id?.toString() === id
@@ -33,15 +32,14 @@ const ProductDetails = () => {
       setProduct(found);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      // 🧠 Fallback fetch if product not in Redux
+      // 🧠 Use API instance (fetches baseURL from env)
       API.get(`/products/${id}`)
-  .then((res) => {
-    if (res.data) setProduct(res.data);
-  })
-  .catch((err) => {
-    console.error("❌ Failed to fetch product details:", err);
-  });
-
+        .then((res) => {
+          if (res.data) setProduct(res.data);
+        })
+        .catch((err) => {
+          console.error("❌ Failed to fetch product details:", err);
+        });
     }
   }, [allProducts, id]);
 
@@ -59,7 +57,6 @@ const ProductDetails = () => {
     if (product) fetchData();
   }, [product]);
 
-  // ✅ Add to Cart
   const handleAddToCart = () => {
     if (!selectedSize) {
       setErrorMsg("Please select a size.");
@@ -85,7 +82,6 @@ const ProductDetails = () => {
     setErrorMsg("");
   };
 
-  // ✅ Wishlist toggle
   const toggleWishlist = () => {
     if (!product) return;
     if (isWished) {
@@ -95,7 +91,6 @@ const ProductDetails = () => {
     }
   };
 
-  // ✅ Loading state
   if (!product)
     return <p className="pd-loading">Loading or product not found...</p>;
 
@@ -115,7 +110,6 @@ const ProductDetails = () => {
 
   const productName = product.title || product.name || "Unnamed Product";
 
-  // ✅ Scroll logic for carousel
   const scrollLeft = () => {
     document
       .getElementById("similar-scroll")
@@ -149,7 +143,6 @@ const ProductDetails = () => {
 
         <p className="pd-description">{product.description}</p>
 
-        {/* 👕 Size Selection */}
         <div className="pd-size-options-box">
           <p className="pd-size-label">Select Size:</p>
           <div className="pd-size-button-group">
@@ -171,7 +164,6 @@ const ProductDetails = () => {
           {errorMsg && <p className="pd-error-msg">{errorMsg}</p>}
         </div>
 
-        {/* ❤️ Wishlist + 🛒 Add to Cart */}
         <div className="pd-actions">
           <button className="pd-wishlist-btn" onClick={toggleWishlist}>
             {isWished ? <FaHeart color="red" /> : <FaRegHeart />} Wishlist
@@ -183,12 +175,10 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {/* 🧠 AI-Powered Similar Products Carousel */}
       {similarProducts.length > 0 && (
         <div className="pd-recommendations-section">
           <h3 className="pd-recommendations-title">Similar Products</h3>
 
-          {/* Scroll Buttons */}
           <div className="pd-carousel-controls">
             <button onClick={scrollLeft} className="pd-scroll-btn left">
               <FaChevronLeft />
@@ -198,7 +188,6 @@ const ProductDetails = () => {
             </button>
           </div>
 
-          {/* Scrollable container */}
           <div id="similar-scroll" className="pd-recommendation-list scrollable">
             {similarProducts.map((item) => (
               <Link
