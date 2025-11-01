@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AIChat.css";
+import API from "../services/api";
 
 const AIChat = () => {
   const [messages, setMessages] = useState([]);
@@ -9,14 +10,19 @@ const AIChat = () => {
   const [showWelcome, setShowWelcome] = useState(false);
   const navigate = useNavigate();
 
-  // ✅ Simulate typing delay before showing welcome message
+  // ✅ Show welcome message with small delay
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => {
       const welcome = {
         role: "assistant",
-        content:
-          "👋 Hi there! Welcome to **Shoppica** — your smart shopping assistant! 🛍️\n\nYou can ask me things like:\n- *Show me a yellow dress*\n- *Find a stylish men's shirt under ₹1500*\n- *Suggest an outfit for a wedding*\n\nWhat would you like to explore today?",
+        content: `👋 Hi there! Welcome to <b>Shoppica</b> — your smart shopping assistant! 🛍️
+        <br/><br/>You can ask me things like:
+        <ul>
+          <li>Show me a yellow dress</li>
+          <li>Find a stylish men's shirt under ₹1500</li>
+          <li>Suggest an outfit for a wedding</li>
+        </ul>`,
       };
       setMessages([welcome]);
       setLoading(false);
@@ -26,6 +32,7 @@ const AIChat = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // ✅ Send message to AI API
   const sendMessage = async () => {
     if (!input.trim()) return;
 
@@ -35,29 +42,25 @@ const AIChat = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/ai", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
-      });
-
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "AI response failed");
+      const res = await API.post("/ai", { message: input }); // ✅ use API.post
+      const data = res.data;
 
       const aiMsg = {
         role: "assistant",
-        content: data.reply,
+        content: data.reply || "🤖 Sorry, I didn’t catch that.",
         products: data.products || [],
       };
 
       setMessages((prev) => [...prev, aiMsg]);
     } catch (err) {
       console.error("❌ Error chatting with AI:", err);
-      const errMsg = {
-        role: "assistant",
-        content: "⚠️ Sorry, I couldn’t connect to Shoppica AI right now.",
-      };
-      setMessages((prev) => [...prev, errMsg]);
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: "⚠️ Sorry, I couldn’t connect to Shoppica AI right now.",
+        },
+      ]);
     } finally {
       setLoading(false);
     }
@@ -77,7 +80,6 @@ const AIChat = () => {
               }}
             ></div>
 
-            {/* 🛍️ Product list (if any) */}
             {msg.products && msg.products.length > 0 && (
               <div className="ai-product-list">
                 {msg.products.map((p) => (
@@ -105,12 +107,10 @@ const AIChat = () => {
           </div>
         ))}
 
-        {/* 💭 Typing Indicator */}
-        {loading && !showWelcome && (
-          <div className="typing-indicator">💭 Shoppica is typing...</div>
-        )}
-        {loading && showWelcome && (
-          <p className="loading-text">💭 Thinking...</p>
+        {loading && (
+          <p className="loading-text">
+            💭 {showWelcome ? "Thinking..." : "Shoppica is typing..."}
+          </p>
         )}
       </div>
 
